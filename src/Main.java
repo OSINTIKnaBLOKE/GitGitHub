@@ -1,24 +1,25 @@
-public class Main { /**
+public class Main {
+    /**
      * @returns основные команды гит
-     *
      * @returns git init - Инициализирует новый Git-репозиторий в текущую директорию
-     *
      * @returns git clone - Клонирует репозиторий из URL в новою директорию
-     *
      * @returns git add - добавляет файл в индекс для следующего коммита
-     *
      * @returns git commit - Фиксирует подготовленные изменения в репозитории
-     *
      * @returns git push - Отправляет изменения из локального репозитория в удаленный
-     *
      * @returns git pull - Обновляет текущую ветку с последней версией из удаленного репозитория
-     *
      * @returns git branch - Показывает, создает или удаляет ветку
-     *
      * @returns git merge - Сливает изменения указанной ветки в текущую ветку
      *
-     * */
+     *
+     */
     static void main() {
+        int i = 0;
+        for (int j = 0; j < 10; j++) {
+            i += j;
+        }
 
+        System.out.println(i);
+
+        System.out.println(i - 1);
     }
 }
