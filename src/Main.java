@@ -21,12 +21,6 @@ public class Main {
         for (int j = 0; j < 10; j++) {
             i += j;
         }
-
-        System.out.println(i);
-
-        System.out.println(i - 1);
-
-        // Добавлена новая строка
     }
 }
 
