@@ -27,6 +27,7 @@ public class Main {
         System.out.println(i - 1);
 
         // Добавлена новая строка
+        // еще одна новая строка
     }
 }
 
