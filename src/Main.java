@@ -1,6 +1,9 @@
+import java.util.List;
+
 public class Main {
     /**
      * основные команды гит
+     *
      * @returns git init - Инициализирует новый Git-репозиторий в текущую директорию
      * @returns git clone - Клонирует репозиторий из URL в новою директорию
      * @returns git add - добавляет файл в индекс для следующего коммита
@@ -18,14 +21,42 @@ public class Main {
 
     static void main() {
 
-        Pressable pressable = new Pressable() {
-            @Override
-            public void activateEngine() {
-                System.out.println("Двигатель запущен! мы летим к звездам!");
-            }
-        };
 
-        pressable.activateEngine();
+       /* List<Integer> numbers = List.of(2, 4, 6, 8);
+
+        // all(): все ли числа четные
+        boolean allEven = numbers.stream().allMatch(n -> n % 2 == 0); // true
+
+        // any(): есть ли число больше 5
+        boolean anyGreaterThanFive = numbers.stream().anyMatch(n -> n > 5); // true*/
+
+        for (int i = 31; i <= 125; i++) {
+            if (!f(i, 1) && f(i, 2)) {
+                System.out.println(i);
+                break;
+            }
+        }
+
+
+    }
+
+    private static boolean f(double s, int m) {
+        if (s <= 30) {
+            return m % 2 == 0;
+        }
+
+        if (m == 0) {
+            return false;
+        }
+
+        List<Boolean> list = List.of(f(s - 2, m - 1),
+                f(s - 5, m - 1),
+                f(Math.floor(s / 3), m -1));
+        if ((m - 1) % 2 == 0) {
+            return list.stream().anyMatch(n -> n);
+        } else {
+            return list.stream().allMatch(n -> n);
+        }
     }
 }
 
@@ -63,10 +94,10 @@ public class Main {
  **/
 
 /*
-* * - заменяет любое количество символов. Например, *.log игнорирует все файл с разрешением .log
-* / - в конце шаблона означает директорию. Например, .logs/ игнорирует все содержимое папки logs
-* ! - в начале строки инвертирует правило. Например, если у вас есть правило *.log, но вы не хотите отслеживать important.log,
-*  добавьте строку !important.log
-*
-* ** - соответствует любому кол-во вложенных папок. Например, **=/temp (без =) игнорирует папки temp на любом уровне вложенности
-* */
+ * * - заменяет любое количество символов. Например, *.log игнорирует все файл с разрешением .log
+ * / - в конце шаблона означает директорию. Например, .logs/ игнорирует все содержимое папки logs
+ * ! - в начале строки инвертирует правило. Например, если у вас есть правило *.log, но вы не хотите отслеживать important.log,
+ *  добавьте строку !important.log
+ *
+ * ** - соответствует любому кол-во вложенных папок. Например, **=/temp (без =) игнорирует папки temp на любом уровне вложенности
+ * */
