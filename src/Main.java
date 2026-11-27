@@ -30,6 +30,7 @@ public class Main {
         // any(): есть ли число больше 5
         boolean anyGreaterThanFive = numbers.stream().anyMatch(n -> n > 5); // true*/
 
+        // new line
         for (int i = 31; i <= 125; i++) {
             if (!f(i, 1) && f(i, 2)) {
                 System.out.println(i);
