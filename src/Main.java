@@ -42,8 +42,6 @@ public class Main {
 
     private static boolean f(double s, int m) {
         if (s <= 30) {
-            System.out.println("привет");
-            System.out.println("привет");
             return m % 2 == 0;
         }
 
