@@ -31,6 +31,8 @@ public class Main {
         boolean anyGreaterThanFive = numbers.stream().anyMatch(n -> n > 5); // true*/
 
         // new line
+        // сначало отправить ветку на гитхаб
+        // потом update project
         for (int i = 31; i <= 125; i++) {
             if (!f(i, 1) && f(i, 2)) {
                 System.out.println(i);
